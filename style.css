@@ -24,3 +24,47 @@
 */
     transform:translate(20px, 30px)
 }
+
+/*STEP #1: define the animation sequence*/ 
+@keyframes colorchange{
+from{background-color: rgb(204, 217, 229); }
+to{background-color: beige; }
+
+}
+
+
+@keyframes colorchangesmooth {
+    0%{background-color: rgb(204, 217, 229);}
+    50%{background-color: beige;}
+    100%{background-color:rgb(138, 223, 223) ;}
+
+
+}
+
+    /* STEP#2: configure the animation */
+#animated-box{
+width: 200px;
+height: 200px;
+background-color:rgb(138, 223, 223) ;
+animation-name:colorchangesmooth;
+animation-duration:3s;
+animation-iteration-count:infinite; 
+}
+
+@keyframes spin{
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(360deg)}
+
+}
+
+#animated-emoji{
+    font-size:40px;
+    animation-name:spin;
+    animation-duration:10s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+
+    border: 2px solid black;
+    display:inline-block;
+    background-color: rgb(145, 145, 234);
+}
